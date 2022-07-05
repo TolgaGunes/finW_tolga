@@ -28,7 +28,7 @@ public class Login_StepDefs {
 
     @When("user enters password {string}")
     public void user_enters_password(String password) {
-        loginPage.inputPassword.sendKeys(password);
+
     }
 
     @When("user clicks to login button")
@@ -39,8 +39,7 @@ public class Login_StepDefs {
 
     @Then("user should see the top-bar name {string} at top right-hand corner of the page")
     public void userShouldSeeTheTopBarNameAtTopRightHandCornerOfThePage(String topBarName) {
-        String actualTopBarNameText = loginPage.topBarName.getText();
-       Assert.assertEquals(topBarName,actualTopBarNameText);
+        String actualTopBarName = loginPage.getBarName();
     }
 
     // @FNW-513
@@ -51,7 +50,7 @@ public class Login_StepDefs {
 
     @And("user enters invalid password {string}")
     public void userEntersInvalidPassword(String password) {
-        loginPage.inputPassword.sendKeys(password);
+        loginPage.enterPassword(password);
     }
 
     @Then("user should not log in to the account")
@@ -70,7 +69,7 @@ public class Login_StepDefs {
 
     @And("user enters wrong password {string}")
     public void userEntersWrongPassword(String wrongPassword) {
-        loginPage.inputPassword.sendKeys(wrongPassword);
+        loginPage.enterPassword(wrongPassword);
     }
 
 
@@ -87,8 +86,8 @@ public class Login_StepDefs {
     }
 
     @And("user do not enters password {string}")
-    public void userDoNotEntersPassword(String string) {
-        loginPage.inputPassword.sendKeys(string);
+    public void userDoNotEntersPassword(String password) {
+        loginPage.enterPassword(password);
     }
 
     @Then("Then user should see the warning message {string}")

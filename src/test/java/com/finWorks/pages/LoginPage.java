@@ -16,7 +16,11 @@ public class LoginPage {
     public WebElement inputUsername;
 
     @FindBy(name = "password")
-    public WebElement inputPassword;
+    private WebElement inputPassword;
+
+
+
+
 
     @FindBy(xpath = "//button[text()='Log in']")
     public WebElement loginButton;
@@ -26,8 +30,11 @@ public class LoginPage {
     public WebElement topBarName;
 
 
+
     @FindBy(xpath = "//p[@class='alert alert-danger']")
     public WebElement wrongLoginErrorMessage;
+
+
 
     @FindBy(name = "login")
     public WebElement fillOutThisFieldMessageEmailBox;
@@ -41,6 +48,15 @@ public class LoginPage {
         loginButton.click();
     }
 
+
+
+    public String getBarName() {
+        return topBarName.getText();
+    }
+
+    public void enterPassword(String password) {
+         inputPassword.sendKeys(password);
+    }
 }
 
 

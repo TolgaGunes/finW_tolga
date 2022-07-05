@@ -1,6 +1,6 @@
 
-@wip
-Feature: Default
+@wip1
+Feature: Login feature
 
   Background: user is on the login page
     Given user is on the login page of website

@@ -15,8 +15,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/finWorks/step_defs",
-        dryRun = false,
-        tags = "@FNW-522",
+        dryRun = true,
+        tags = "@wip2 ",
         publish = true
 
 )

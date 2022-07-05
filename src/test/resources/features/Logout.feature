@@ -1,4 +1,4 @@
-
+@wip2
 Feature: FinWork logout test
 
   @FNW-522
