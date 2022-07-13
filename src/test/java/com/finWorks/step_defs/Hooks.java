@@ -1,8 +1,4 @@
 package com.finWorks.step_defs;
-/*
-In the class we will be able to pass pre- & post- conditions to
- each scenario and each step
- */
 
 
 import com.finWorks.utilties.Driver;
@@ -12,21 +8,13 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-    //import from io.cucumber.java not from junit
-    //@Before (order = 1)
-    public void setupScenario(){
-        System.out.println("====Setting up browser using cucumber @Before");
-    }
+    //public void setupScenario(){    }
 
-    //@Before (value = "@login", order = 2)
-    public void setupScenarioForLogins(){
-        System.out.println("====this will only apply to scenarios with @login tag");
-    }
+
+    //public void setupScenarioForLogins(){}
 
     //@Before (value = "@db", order = 0)
-    public void setupForDatabaseScenarios(){
-        System.out.println("====this will only apply to scenarios with @db tag");
-    }
+   //public void setupForDatabaseScenarios(){    }
 
 
     @After
@@ -46,18 +34,14 @@ public class Hooks {
         //BrowserUtils.sleep(5);
         Driver.closeDriver();
 
-        //System.out.println("====Closing browser using cucumber @After");
-        //System.out.println("====Scenario ended/ Take screenshot if failed!");
+
     }
 
     // @BeforeStep
-    public void setupStep(){
-        System.out.println("--------> applying setup using @BeforeStep");
-    }
+   // public void setupStep(){
+        //System.out.println("--------> applying setup using @BeforeStep");  }
 
     //@AfterStep
-    public void afterStep(){
-        System.out.println("--------> applying tearDown using @AfterStep");
-    }
+    //public void afterStep(){System.out.println("--------> applying tearDown using @AfterStep");}
 
 }
