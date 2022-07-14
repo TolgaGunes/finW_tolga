@@ -55,9 +55,9 @@ public class Login_StepDefs {
 
     @Then("user should not log in to the account")
     public void user_should_not_log_in_to_the_account() {
-        String expectedTitle = "Login | Best solution for startups";
-        String actualTitle = Driver.getDriver().getTitle();
-        Assert.assertEquals(expectedTitle,actualTitle);
+
+        LoginPage.getErrorMessage();
+
     }
 
 
@@ -92,13 +92,7 @@ public class Login_StepDefs {
 
     @Then("Then user should see the warning message {string}")
     public void thenUserShouldSeeTheWarningMessage(String warningMessage) {
-        String expectedWarningMessage = "Please fill out this field.";
-        String actualMessage1 = loginPage.fillOutThisFieldMessageEmailBox.getAttribute("validationMessage");
-        String actualMessage2 = loginPage.fillOutThisFieldMessagePasswordBox.getAttribute("validationMessage");
-
-        Assert.assertEquals(expectedWarningMessage, actualMessage1);
-        Assert.assertEquals(expectedWarningMessage,actualMessage2);
-
+            loginPage.fillOutFieldErrorMessage();
     }
 
 
