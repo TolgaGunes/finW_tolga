@@ -7,5 +7,7 @@ public class BasePage {
     public void navigateTo(String module) {
         String xpath = "//span[contains(text(),'"+module+"')]";
         Driver.getDriver().findElement(By.xpath(xpath));
+
+        //Forgive me Tolga for what I have done to your project
     }
 }
