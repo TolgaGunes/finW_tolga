@@ -50,5 +50,7 @@ public class Logout_StepDefs {
         String actualLogInPageTitle = Driver.getDriver().getTitle();
         Assert.assertEquals(expectedLogInPageTitle, actualLogInPageTitle);
     }
+
+
 }
 
