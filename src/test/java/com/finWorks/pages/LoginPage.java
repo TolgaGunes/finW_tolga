@@ -2,11 +2,14 @@ package com.finWorks.pages;
 
 import com.finWorks.utilties.ConfigurationReader;
 import com.finWorks.utilties.Driver;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
+
+    public Alert userNameGabriela;
 
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
