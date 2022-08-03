@@ -22,16 +22,16 @@ public class Login_StepDefs_Gabriela extends LoginPageGabriela  {
         Driver.getDriver().get(url);
     }
 
-    @When("user enters username {string}")
-    public void user_enters_username(String userName) {
+    @When("user enters the username {string}")
+    public void user_enters_the_username(String userName) {
 
 
 
         LoginPageGabriela.userNameGabriela.sendKeys(userName);
     }
 
-    @When("user enters password {string}")
-    public void user_enters_password(String password) {
+    @When("user enters the password {string}")
+    public void user_enters_the_password(String password) {
         LoginPageGabriela.password_Gabriela.sendKeys(password);
     }
 
@@ -56,13 +56,13 @@ public class Login_StepDefs_Gabriela extends LoginPageGabriela  {
     }
 
 
-    @When("user enters invalid  username {string}")
-    public void user_enters_invalid_username(String userName) {
+    @When("user enters a invalid  username {string}")
+    public void user_enters_a_invalid_username(String userName) {
         LoginPageGabriela.userNameGabriela.sendKeys(userName);
     }
 
-    @When("user enters invalid password {string}")
-    public void user_enters_invalid_password(String Password) {
+    @When("user enters a invalid password {string}")
+    public void user_enters_a_invalid_password(String Password) {
         LoginPageGabriela.userNameGabriela.sendKeys(Password);
     }
 

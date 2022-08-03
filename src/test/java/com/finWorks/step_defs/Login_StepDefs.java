@@ -56,7 +56,7 @@ public class Login_StepDefs {
     @Then("user should not log in to the account")
     public void user_should_not_log_in_to_the_account() {
 
-        LoginPage.getErrorMessage();
+        //LoginPage.getErrorMessage();
 
     }
 
@@ -92,7 +92,7 @@ public class Login_StepDefs {
 
     @Then("Then user should see the warning message {string}")
     public void thenUserShouldSeeTheWarningMessage(String warningMessage) {
-            loginPage.fillOutFieldErrorMessage();
+            //loginPage.fillOutFieldErrorMessage();
     }
 
 

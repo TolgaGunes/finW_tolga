@@ -7,8 +7,8 @@ Feature: Login feature
   @smoke
   Scenario Outline: AC1 - Verify that I can login with valid credentials.
 
-    When user enters username "<userName>"
-    And user enters password "<password>"
+    When user enters the username "<userName>"
+    And user enters the password "<password>"
     And user clicks the login button
     Then user should see the dashboard
 
@@ -25,8 +25,8 @@ Feature: Login feature
 
   Scenario Outline:  AC2 - Verify that I can not login with invalid credentials. Negative scenario
 
-    When user enters invalid  username "<userName>"
-    And user enters invalid password "<password>"
+    When user enters a invalid  username "<userName>"
+    And user enters a invalid password "<password>"
     And user clicks the login button
     Then user should not be able to login
 
