@@ -25,8 +25,8 @@ public class ContactsModule_stepDefinition_Buelent {
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
 
 
-    @Given("I logged into twiliaERP")
-    public void i_logged_into_twilia_erp() {
+    @Given("I logged into the twiliaERP")
+    public void i_logged_into_the_twilia_erp() {
         Driver.getDriver().get(ConfigurationReader.getProperty("signInPage"));
         loginPage.login("salesmanager15@info.com", "salesmanager");
 
@@ -152,7 +152,7 @@ public class ContactsModule_stepDefinition_Buelent {
     }
 
 
-    @And("I click the edit button")
+    @And("I click on the edit button")
     public void userClicksTheEditButton() {
         BrowserUtils.sleep(1);
         contactsTab.editBtn.click();

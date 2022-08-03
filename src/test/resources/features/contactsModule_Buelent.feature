@@ -12,7 +12,7 @@ Feature: Create Contact
   5- Verify that user deletes an existing contact
   @createAndDelete  @FNW-434
   Scenario Outline: Create a Contact
-    Given I logged into twiliaERP
+    Given I logged into the twiliaERP
     When I enter "<fullName>", "<phone>" ,"<Mobile>" and "<email>" then save a new contact
     Then I should see contact information for "Bülent Kaya"
 
@@ -32,7 +32,7 @@ Feature: Create Contact
   @createAndDelete  @FNW-435
   Scenario Outline: Verify that I can edit an existing contact.
     Given I am on contact`s info page of "<Contact>"
-    And I click the edit button
+    And I click on the edit button
     And I edit my address by typing "<street>", "<city>" ,"<ZIP>" and "<TIN>"
     Then I click the save button and sees his or her name "<Contact>" in the title
 

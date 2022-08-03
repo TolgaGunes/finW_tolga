@@ -13,8 +13,7 @@ import org.openqa.selenium.Keys;
 
 import java.util.concurrent.TimeUnit;
 
-public class repairsModuleStepDefinitionEnes {
-
+public class RepairsModuleStepDefinitions_Enes {
     RepairsModulePagesEnes repairsModulePagesEnes = new RepairsModulePagesEnes();
 
 
@@ -114,5 +113,4 @@ public class repairsModuleStepDefinitionEnes {
     public void saveRepairOrder() {
         repairsModulePagesEnes.saveButton.click();
     }
-
 }
