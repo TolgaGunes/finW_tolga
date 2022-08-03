@@ -1,18 +1,25 @@
 package com.finWorks.pages;
 
+
 import com.finWorks.utilties.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RepairsModel_Buelent {
-    public RepairsModel_Buelent(){
-        PageFactory.initElements(Driver.getDriver(),this);
-    }
+public class RepairsPageBuelent {
+   public RepairsPageBuelent(){
+       PageFactory.initElements(Driver.getDriver(),this);
+   }
 
-    @FindBy(xpath = "//button[normalize-space()='Create']")
+   @FindBy(xpath = "//button[normalize-space()='Create']")
     public WebElement createBtn;
 
+   @FindBy(xpath = "//label[@for='o_field_input_92']")
+   public WebElement repairReference;
+
+
+   @FindBy(xpath = "//li[normalize-space()='Repair Orders']")
+   public WebElement repairsOrder;
 
     @FindBy(xpath = "//button[@aria-label='list']")
     public WebElement listIcon;
@@ -45,7 +52,6 @@ public class RepairsModel_Buelent {
     public WebElement currentLocation;
 
 
-    @FindBy(xpath = "//select[@id='o_field_input_100']")
-    public WebElement invoicceMethod;
+
 
 }

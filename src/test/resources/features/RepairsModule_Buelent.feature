@@ -13,18 +13,23 @@ Feature: Create a new Repair Order
   3- User can edit the existing Repair Orders
   4- User can create a new Repair Order
   5- User can fill in the Repair Order form
+  Background: For the scenarios in the feature file,user is expected to be on login page
+    Given I logged into twiliaERP
+
 
   Scenario: Verify that user can access the existing repair Orders
-    Given I logged into twiliaERP
     When I click the Repairs Module
+    Then I click the Create Button
     Then I can access the Repairs Orders
 
   Scenario: Verify that user can create a new Repair Order
     Given I am on Repair Orders
-    When I click the Create Button
-    Then Repair Orders new Pop Up opens
-    And I choose product ,customer  and invoice method
-    And I type the product quantity and click the save button
+    When I click the Create Repair Order Button
+    Then Repair Orders new window opens
+    And I choose product
+    And I type the product quantity
+    And I choose invoice method
+    Then I choose customer click the save button
 
   Scenario: Verify that user can edit the existing repair orders
     Given I am on Repair Orders
